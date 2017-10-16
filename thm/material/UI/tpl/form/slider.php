@@ -29,7 +29,7 @@ elseif ($field->step > 0)
  class="md-block md-icon-left<?= $field->classError(); ?>"
  ng-controller="GDOSliderCtrl">
 
-  <?= $field->icon; ?>
+  <?= $field->htmlIcon(); ?>
 
   <label
    class="md-no-float md-container-ignore"
