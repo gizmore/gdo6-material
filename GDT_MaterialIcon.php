@@ -14,9 +14,12 @@ final class GDT_MaterialIcon
 	public static function iconS($icon, $style)
 	{
 		static $map = array(
-			'add' => 'plus',
-			'create' => 'plus-circle',
+			'add' => 'add',
+			'create' => 'add-circle',
+			'edit' => 'create',
+			'menu' => 'menu',
 			'delete' => 'minus-circle',
+			'like' => 'thumb_up',
 			'remove' => 'minus',
 			'up' => 'caret-up',
 			'down' => 'caret-down',

@@ -131,3 +131,10 @@ div.gdo-label {
 }
 
 h2.gdo-form-title { text-align: center; }
+
+/** File attachment **/
+.gdo-image-file img {
+	max-width: 128px;
+	max-height: 128px;
+	border: 1px dashed #000;
+}

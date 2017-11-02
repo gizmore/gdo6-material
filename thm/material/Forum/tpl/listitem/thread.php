@@ -25,5 +25,5 @@ $subscribeClass = $subscribed ? 'gdo-forum gdo-forum-subscribed' : 'gdo-forum';
   <?= t('thread_postcount', [$thread->getPostCount()]); ?>
   <?= GDT_Icon::iconS('arrow_right'); ?>
   <?php $href = $subscribed ? href('Forum', 'Unsubscribe', '&thread='.$tid) : href('Forum', 'Subscribe', '&thread='.$tid)?>
-  <?= GDT_IconButton::make()->href($href)->icon('email'); ?>
+  <?= GDT_IconButton::make()->href($href)->icon('email')->render(); ?>
  </md-list-item>

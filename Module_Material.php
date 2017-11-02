@@ -51,6 +51,8 @@ final class Module_Material extends GDO_Module
 	
 	private function onIncludeGDOScripts()
 	{
+		$this->addCSS("css/gdo6-material.css");
+		
 		$this->addJavascript('js/gdo-module.js');
 		
 		$this->addJavascript('js/gwf-app-ctrl.js');

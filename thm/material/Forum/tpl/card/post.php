@@ -1,15 +1,15 @@
 <?php
-use GDO\Forum\GDO_ForumPost;
+/** @var $post GDO\Forum\GDO_ForumPost */
 use GDO\UI\GDT_Button;
 use GDO\UI\GDT_EditButton;
 use GDO\UI\GDT_IconButton;
 use GDO\User\GDO_User;
+use GDO\UI\GDT_Icon;
+use GDO\UI\GDT_Link;
+use GDO\Vote\GDT_LikeButton;
 
-$post instanceof GDO_ForumPost;
 $creator = $post->getCreator();
 $user = GDO_User::current();
-?>
-<?php
 $unread = $post->isUnread($user);
 $readClass = $unread ? 'gdo-forum-unread' : 'gdo-forum-read';
 if ($unread) $post->markRead($user);
@@ -29,7 +29,7 @@ if ($unread) $post->markRead($user);
     <?= $post->displayMessage(); ?>
 <?php if ($post->hasAttachment()) : ?>
     <div class="gdo-attachment" layout="row" flex layout-fill layout-align="left center">
-      <div><?= GDT_IconButton::make()->icon('file_download')->href($post->hrefAttachment()); ?></div>
+      <div><?= GDT_IconButton::make()->icon('file_download')->href($post->hrefAttachment())->render(); ?></div>
       <div><?= $post->getAttachment()->renderCell(); ?></div>
     </div>
 <?php endif; ?>
@@ -38,9 +38,19 @@ if ($unread) $post->markRead($user);
   </md-card-content>
   <gdo-div></gdo-div>
   <md-card-actions layout="row" layout-align="end center">
-    <?= GDT_EditButton::make()->href($post->hrefEdit())->editable($post->canEdit($user)); ?>
-    <?= GDT_Button::make('btn_reply')->icon('reply')->href($post->hrefReply()); ?>
-    <?= GDT_Button::make('btn_quote')->icon('reply_all')->href($post->hrefQuote()); ?>
+   <md-menu>
+      <md-button aria-label="Open action menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
+        <?=GDT_Icon::iconS('menu')?>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item><?=GDT_Link::make('btn_edit')->icon('edit')->href($post->hrefEdit())->editable($post->canEdit($user))->render()?></md-menu-item>
+        <md-menu-item><?=GDT_LikeButton::make('btn_like')->gdo($post)->render()?></md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item><?=GDT_Link::make('btn_reply')->icon('reply')->href($post->hrefReply())->render()?></md-menu-item>
+        <md-menu-item><?=GDT_Link::make('btn_quote')->icon('quote')->href($post->hrefQuote())->render()?></md-menu-item>
+      </md-menu-content>
+    </md-menu>
+
   </md-card-actions>
 </md-card>
 <!-- End ForumPost card -->
