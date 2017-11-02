@@ -30,7 +30,7 @@ final class GDT_MaterialIcon
 			'error' => 'exclamation-triangle',
 			'email' => 'email',
 			'title' => 'short_text',
-			'message' => 'paragraph',
+			'message' => 'line_style',
 			'captcha' => 'lock',
 			'tooltip' => 'info-circle',
 			'star' => 'star',

@@ -25,6 +25,7 @@ $field instanceof GDT_File;
  ng-init='initGDOConfig(<?= $field->displayJSON(); ?>, "#gwffile_<?= $field->name; ?>");'>
 <md-input-container
  class="md-block md-float md-icon-left<?php echo $field->classError(); ?>"
+ md-no-float
  flex>
   <label for="form[<?php echo $field->name; ?>]"><?php echo $field->displayLabel(); ?></label>
   <?php echo $field->htmlIcon(); ?>
