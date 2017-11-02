@@ -138,3 +138,18 @@ h2.gdo-form-title { text-align: center; }
 	max-height: 128px;
 	border: 1px dashed #000;
 }
+
+/** Pagemenu **/
+.gdo-pagemenu li {
+	display: inline-block;
+}
+
+.gdo-pagemenu ul {
+	border-radius: 8px;
+	border: 1px solid #000;
+}
+
+.gdo-pagemenu a {
+	border-left: 1px solid #000;
+}
+

@@ -1,5 +1,5 @@
 <?php /** @var $bar \GDO\UI\GDT_Bar **/ ?>
-<section layout-wrap
+<section layout-wrap flex
  class="gdo-bar gdo-bar-<?= $bar->htmlDirection(); ?>"
  layout="<?= $bar->htmlDirection(); ?>"
  layout-align="space-around center">

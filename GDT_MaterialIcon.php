@@ -15,7 +15,7 @@ final class GDT_MaterialIcon
 	{
 		static $map = array(
 			'add' => 'add',
-			'create' => 'add-circle',
+			'create' => 'add_circle',
 			'edit' => 'create',
 			'menu' => 'menu',
 			'delete' => 'minus-circle',
