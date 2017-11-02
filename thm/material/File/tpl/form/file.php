@@ -34,7 +34,7 @@ $field instanceof GDT_File;
    lf-caption="{{displayFileName()}}"
    lf-placeholder="{{displayFileName()}}"
    ng-change="lfFilesChanged($event)"
-   <?php if ($field->preview) : ?>preview<?php endif; ?>
+   <?php if ($field->preview) : ?>XXXpreview<?php endif; ?>
    <?php echo $field->htmlDisabled(); ?>
    <?php echo $field->htmlRequired(); ?>></lf-ng-md-file-input>
   <br/>

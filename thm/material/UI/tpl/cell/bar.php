@@ -5,7 +5,7 @@
  layout-align="space-around center">
 <?php if ($bar->fields) : ?>
   <?php foreach ($bar->fields as $field) : ?>
-    <?= $field->renderCell(); ?>
+    <?= $field->render(); ?>
   <?php endforeach; ?>
 <?php endif;?>
 </section>
