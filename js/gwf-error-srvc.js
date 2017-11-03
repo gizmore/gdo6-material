@@ -28,7 +28,7 @@ angular.module('gdo6-material')
 //					.parent(angular.element(document.querySelector('#popupContainer')))
 					.clickOutsideToClose(false)
 					.title(title)
-					.htmlContent(text)
+					.htmlContent('<pre class="gdo-error-popup">' + text + '</pre>')
 					.ariaLabel(title)
 					.ok("Aww")
 					);
