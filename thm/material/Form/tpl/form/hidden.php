@@ -7,3 +7,4 @@ $field instanceof GDT_Hidden;
  name="form[<?= $field->name?>]"
  value="<?= $field->displayVar(); ?>"
  type="hidden" />
+ 

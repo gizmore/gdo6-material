@@ -29,8 +29,8 @@ if ($unread) $post->markRead($user);
     <?= $post->displayMessage(); ?>
 <?php if ($post->hasAttachment()) : ?>
     <div class="gdo-attachment" layout="row" flex layout-fill layout-align="left center">
-      <div><?= GDT_IconButton::make()->icon('file_download')->href($post->hrefAttachment())->render(); ?></div>
-      <div><?= $post->getAttachment()->renderCell(); ?></div>
+      <div><?= GDT_IconButton::make()->icon('file')->href($post->hrefAttachment())->render(); ?></div>
+      <div><?= $post->getAttachment()->tempHref($post->hrefAttachment())->renderCell(); ?></div>
     </div>
 <?php endif; ?>
       <hr/>
