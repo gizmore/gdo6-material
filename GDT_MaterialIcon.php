@@ -28,6 +28,7 @@ final class GDT_MaterialIcon
 			'error' => 'report_problem',
 			'file' => 'attachment',
 			'left' => 'chevron-left',
+			'level' => 'enhanced_encryption',
 			'like' => 'thumb_up',
 			'link' => 'chain',
 			'menu' => 'menu',

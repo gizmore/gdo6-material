@@ -1,6 +1,7 @@
 <?php /** @var $field \GDO\DB\GDT_Int **/ ?>
 <md-input-container class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex>
   <label for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
+  <?=$field->htmlIcon()?>
   <input
    type="number"
    name="form[<?= $field->name; ?>]"
