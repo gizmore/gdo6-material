@@ -1,21 +1,19 @@
 <?php
 /** @var $post GDO\Forum\GDO_ForumPost */
-use GDO\UI\GDT_Button;
-use GDO\UI\GDT_EditButton;
 use GDO\UI\GDT_IconButton;
 use GDO\User\GDO_User;
 use GDO\UI\GDT_Icon;
 use GDO\UI\GDT_Link;
 use GDO\Vote\GDT_LikeButton;
-
 $creator = $post->getCreator();
 $user = GDO_User::current();
 $unread = $post->isUnread($user);
 $readClass = $unread ? 'gdo-forum-unread' : 'gdo-forum-read';
+$scoreClass = $post->canRead() ? ' gdo-forum-post' : ' gdo-forum-post-locked';
 if ($unread) $post->markRead($user);
 ?>
 <!-- Begin ForumPost card -->
-<md-card class="<?=$readClass;?>">
+<md-card class="<?=$readClass?><?=$scoreClass?>">
   <md-card-title>
     <md-card-title-text>
       <span class="md-headline">
