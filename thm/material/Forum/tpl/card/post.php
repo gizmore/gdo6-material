@@ -13,10 +13,11 @@ $scoreClass = $post->canRead() ? ' gdo-forum-post' : ' gdo-forum-post-locked';
 if ($unread) $post->markRead($user);
 ?>
 <!-- Begin ForumPost card -->
-<md-card class="<?=$readClass?><?=$scoreClass?>">
+<md-card class="<?=$readClass?><?=$scoreClass?>" id="post-<?=$post->getID()?>">
   <md-card-title>
     <md-card-title-text>
       <span class="md-headline">
+        <a href="#post-<?=$post->getID()?>"><?=t('post_link')?></a>
         <div><?= $creator->renderCell(); ?></div>
         <div class="gdo-card-date"><?= t('posted_at', [$post->displayCreated()]); ?></div>
       </span>

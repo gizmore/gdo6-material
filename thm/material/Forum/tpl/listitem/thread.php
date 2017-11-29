@@ -20,10 +20,10 @@ $subscribeClass = $subscribed ? 'gdo-forum gdo-forum-subscribed' : 'gdo-forum';
   <div class="md-list-item-text" layout="column">
     <h3><?= $thread->displayTitle(); ?></h3>
     <h4><?= t('li_thread_created', [$creator->displayNameLabel()]); ?></h4>
-    <p><?= $thread->displayCreated(); ?></p>
+    <p><?=t('last_post', [tt($thread->getVar('thread_lastposted')), $thread->getLastPoster()->displayNameLabel()])?></p>
   </div>
   <?= t('thread_postcount', [$thread->getPostCount()]); ?>
   <?= GDT_Icon::iconS('arrow_right'); ?>
   <?php $href = $subscribed ? href('Forum', 'Unsubscribe', '&thread='.$tid) : href('Forum', 'Subscribe', '&thread='.$tid)?>
   <?= GDT_IconButton::make()->href($href)->icon('email')->render(); ?>
- </md-list-item>
+</md-list-item>
