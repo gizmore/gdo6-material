@@ -1,5 +1,6 @@
 <?php /** @var $field \GDO\Table\GDT_List **/
 use GDO\Util\Common;
+use GDO\UI\GDT_Icon;
 $result = $field->getResult();
 ?>
 <section
@@ -13,7 +14,7 @@ $result = $field->getResult();
       <span><?= $field->title; ?></span>
       <span flex></span>
       <a class="md-icon-button md-button" ng-click="showDialogId('#gdo-filter-dialog', $event)">
-        <i class="material-icons">perm_data_setting</i>
+        <?=GDT_Icon::iconS('settings')?>
       </a>
     </div>
   </md-toolbar>

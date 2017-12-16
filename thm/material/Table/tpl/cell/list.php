@@ -11,7 +11,7 @@ $field instanceof GDT_List;
       <span><?= $field->title; ?></span>
       <span flex></span>
       <a class="md-icon-button md-button" ng-click="showDialogId('#gdo-filter-dialog', $event)">
-        <i class="material-icons">perm_data_setting</i>
+        <?=GDT_Icon::iconS('settings')?>
       </a>
     </div>
   </md-toolbar>
