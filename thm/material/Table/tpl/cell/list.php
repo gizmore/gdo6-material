@@ -1,5 +1,6 @@
 <?php
 use GDO\Table\GDT_List;
+use GDO\UI\GDT_Icon;
 use GDO\Util\Common;
 $field instanceof GDT_List;
 ?>
