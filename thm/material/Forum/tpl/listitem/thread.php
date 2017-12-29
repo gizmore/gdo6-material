@@ -19,7 +19,7 @@ $subscribeClass = $subscribed ? 'gdo-forum gdo-forum-subscribed' : 'gdo-forum';
   <?= GDO_Avatar::renderAvatar($creator); ?>
   <div class="md-list-item-text" layout="column">
     <h3><?= $thread->displayTitle(); ?></h3>
-    <h4><?= t('li_thread_created', [$creator->displayNameLabel()]); ?></h4>
+    <h4><?= t('li_thread_created', [$creator->displayNameLabel(), $thread->displayCreated()]); ?></h4>
     <p><?=t('last_post', [tt($thread->getVar('thread_lastposted')), $thread->getLastPoster()->displayNameLabel()])?></p>
   </div>
   <?= t('thread_postcount', [$thread->getPostCount()]); ?>
