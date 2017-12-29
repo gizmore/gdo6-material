@@ -1,5 +1,4 @@
 <?php /** @var $field \GDO\UI\GDT_Message **/
-// var_dump($field->gdo);
 ?>
 <md-input-container class="md-block md-float <?= $field->classError(); ?>" flex>
   <label for="form[<?= $field->name; ?>]"><?= $field->htmlIcon(); ?><?= $field->label; ?></label>
