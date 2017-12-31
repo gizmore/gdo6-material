@@ -4,7 +4,7 @@
   <label for="form[<?= $field->name; ?>]"><?= $field->htmlIcon(); ?><?= $field->label; ?></label>
   <textarea
    novalidate
-   class="gdo-message"
+   class="<?=$field->classEditor()?>"
    name="form[<?= $field->name; ?>]"
    rows="6"
    maxRows="6"

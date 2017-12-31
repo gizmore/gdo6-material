@@ -27,6 +27,7 @@ final class GDT_MaterialIcon
 			'email' => 'email',
 			'error' => 'report_problem',
 			'file' => 'attachment',
+			'image' => 'image',
 			'left' => 'chevron-left',
 			'level' => 'enhanced_encryption',
 			'like' => 'thumb_up',

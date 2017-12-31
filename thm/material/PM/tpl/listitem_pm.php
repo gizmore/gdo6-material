@@ -18,7 +18,7 @@ $hrefDelete = href('PM', 'Overview', '&delete=1&id='.$pm->getID());
     <h4><?= html($pm->getTitle()); ?></h4>
     <p><?= t('pm_sent', [$pm->displayDate()]); ?></p>
   </div>
-  <?= GDT_IconButton::make()->icon('delete')->href($hrefDelete); ?>
+  <?= GDT_IconButton::make()->icon('delete')->href($hrefDelete)->render(); ?>
 </md-list-item>
 <?php else : ?>
 <md-list-item class="md-3-line" ng-click="null" href="<?= $href; ?>">
@@ -28,6 +28,6 @@ $hrefDelete = href('PM', 'Overview', '&delete=1&id='.$pm->getID());
     <h4><?= html($pm->getTitle()); ?></h4>
     <p><?= t('pm_received', [$pm->displayDate()]); ?></p>
   </div>
-  <?= GDT_IconButton::make()->icon('delete')->href($hrefDelete); ?>
+  <?= GDT_IconButton::make()->icon('delete')->href($hrefDelete)->render(); ?>
 </md-list-item>
 <?php endif; ?>
