@@ -16,6 +16,7 @@ final class GDT_MaterialIcon
 		static $map = array(
 			'add' => 'add',
 			'alert' => 'add_alarm',
+			'all' => 'storage',
 			'back' => 'undo',
 			'captcha' => 'lock',
 			'create' => 'add_circle',
