@@ -11,7 +11,7 @@ use GDO\UI\GDT_IconUTF8;
  */
 final class GDT_MaterialIcon
 {
-	public static function iconS($icon, $style)
+	public static function iconS($icon, $iconText, $style)
 	{
 		static $map = array(
 			'add' => 'add',
@@ -53,10 +53,10 @@ final class GDT_MaterialIcon
 		);
 		if (!isset($map[$icon]))
 		{
-			return GDT_IconUTF8::iconS($icon, $style);
+			return GDT_IconUTF8::iconS($icon, $iconText, $style);
 		}
 		$icon = $map[$icon];
-		return "<md-icon class=\"material-icons icon-$icon\">$icon</md-icon>";
+		return "<md-icon class=\"material-icons icon-$icon\">$icon<md-tooltip>$iconText</md-tooltip></md-icon></a>";
 	}
 	
 }
