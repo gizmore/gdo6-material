@@ -6,10 +6,6 @@ $id = 'gwfac_'.$field->name;
  ng-init='init(<?= $field->displayJSON(); ?>, "#<?= $id; ?>")'
  class="md-block md-float md-icon-left<?= $field->classError(); ?>"
  flex>
-  <?php if ($field->tooltip) : ?>
-  <md-tooltip md-direction="right"><?= $field->tooltip; ?></md-tooltip>
-  <?php endif; ?>
-  <?= $field->htmlIcon(); ?>
   <md-autocomplete
    md-clear-button="true"
    md-floating-label="<?= $field->displayLabel(); ?>"
