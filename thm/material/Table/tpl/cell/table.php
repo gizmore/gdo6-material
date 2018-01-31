@@ -11,7 +11,7 @@ $result = $field->getResult();
  class="gdo-table ce"
  flex layout-fill layout-align="center"
  ng-controller="GDOTableCtrl"
- ng-init='init(<?= $field->displayJSON(); ?>)'>
+ ng-init='init(<?=json_encode($field->configJSON())?>)'>
 <form method="get" action="<?= $field->href; ?>" class="ib">
   <input type="hidden" name="mo" value="<?= html(Common::getGetString('mo','')); ?>" />
   <input type="hidden" name="me" value="<?= html(Common::getGetString('me','')); ?>" />

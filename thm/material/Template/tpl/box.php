@@ -1,7 +1,3 @@
-<?php
-use GDO\Template\GDT_Box;
-$box instanceof GDT_Box;
-?>
 <md-content class="gdo-box" layout-padding layout-fill flex>
   <div class="md-whiteframe-8dp">
 <?php if ($box->label) : ?>
