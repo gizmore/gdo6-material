@@ -1,7 +1,10 @@
 <?php
 use GDO\UI\GDT_Button;
 $field instanceof GDT_Button;
+$field->addClass("md-button md-raised");
+$field->addClass($field->primary?"md-primary":"md-secondary");
 ?>
-<?php if ($href) : ?>
-<a class="md-button md-primary md-raised" href="<?= $href; ?>" <?= $field->htmlDisabled(); ?>><?= $field->displayLabel(); ?><?= $field->htmlIcon(); ?></a>
-<?php endif; ?>
+<a <?=$field->htmlAttributes()?> href="<?=$href?>" <?=$field->htmlDisabled()?>>
+  <?=$field->displayLabel()?>
+  <?=$field->htmlIcon()?>
+</a>

@@ -7,6 +7,7 @@
  layout-fill
  layout-wrap
  layout-padding
+ md-whiteframe="4"
  >
 <?php if ($bar->fields) : ?>
   <?php foreach ($bar->fields as $field) : ?>

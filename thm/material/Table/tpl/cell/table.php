@@ -45,10 +45,11 @@ $result = $field->getResult();
     </tr>
     <?php endwhile; ?>
     </tbody>
-    <tfoot></tfoot>
+    <tfoot>
+      <?=$field->actions()->render()?>
+    </tfoot>
   </table>
   <input type="submit" class="n" />
 </form>
 </div>
-<?= $field->actions()->renderCell(); ?>
 <!-- END of GDT_Table -->
