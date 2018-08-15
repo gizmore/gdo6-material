@@ -1,5 +1,5 @@
 <?php
-use GDO\Form\GDT_Enum;
+use GDO\DB\GDT_Enum;
 $field instanceof GDT_Enum;
 ?>
 <md-select
