@@ -13,11 +13,11 @@
    <?php if ($field->emptyLabel) : ?>
    <md-option value="<?= $field->emptyValue; ?>"><?= $field->emptyLabel; ?></md-option>
    <?php endif; ?>
-    <?php foreach ($field->choices as $value => $choice) : ?>
-      <md-option value="<?= htmlspecialchars($value); ?>">
-        <?= $field->renderChoice($choice); ?>
-      </md-option>
-    <?php endforeach; ?>
+	<?php foreach ($field->choices as $value => $choice) : ?>
+	  <md-option value="<?= htmlspecialchars($value); ?>">
+		<?= $field->renderChoice($choice); ?>
+	  </md-option>
+	<?php endforeach; ?>
   </md-select>
   <div class="gdo-form-error"><?= $field->error; ?></div>
   <input

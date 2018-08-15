@@ -23,11 +23,11 @@ $id = 'gwfac_'.$field->name;
    md-min-length="0"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>>
-    <div ng-bind-html="selectedItem.display"></div>
-    <md-item-template>
-      <div ng-bind-html="item.display"></div>
-    </md-item-template>
-    <md-not-found><?= t('no_match'); ?></md-not-found>
+	<div ng-bind-html="selectedItem.display"></div>
+	<md-item-template>
+	  <div ng-bind-html="item.display"></div>
+	</md-item-template>
+	<md-not-found><?= t('no_match'); ?></md-not-found>
   </md-autocomplete>
   <input
    type="hidden"

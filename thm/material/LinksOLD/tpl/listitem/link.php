@@ -18,12 +18,12 @@ $rating = $link->getVoteRating(); ?>
 <md-list-item class="md-3-line">
   <?= GDO_Avatar::renderAvatar($creator); ?>
   <div class="md-list-item-text" layout="column">
-    <h3><?= GDT_LinkTitle::make()->gdo($link)->render(); ?></h3>
-    <h4><?= $creator->displayName(); ?></h4>
-    <p>
-      <?= GDT_LevelPopup::make()->level($link->getLevel())->render(); ?>
-      <?= GDT_VotePopup::make()->gdo($link)->render(); ?>
-    </p>
+	<h3><?= GDT_LinkTitle::make()->gdo($link)->render(); ?></h3>
+	<h4><?= $creator->displayName(); ?></h4>
+	<p>
+	  <?= GDT_LevelPopup::make()->level($link->getLevel())->render(); ?>
+	  <?= GDT_VotePopup::make()->gdo($link)->render(); ?>
+	</p>
   </div>
   <?= GDT_Link::make('link_view')->href($link->href_visit())->render(); ?>
 </md-list-item>

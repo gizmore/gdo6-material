@@ -18,9 +18,9 @@ $subscribeClass = $subscribed ? 'gdo-forum gdo-forum-subscribed' : 'gdo-forum';
 <md-list-item class="md-3-line <?=$readClass;?> <?=$subscribeClass;?>" ng-click="null" href="<?= href('Forum', 'Thread', '&thread='.$thread->getID()); ?>">
   <?= GDO_Avatar::renderAvatar($creator); ?>
   <div class="md-list-item-text" layout="column">
-    <h3><?= $thread->displayTitle(); ?></h3>
-    <h4><?= t('li_thread_created', [$creator->displayNameLabel(), $thread->displayCreated()]); ?></h4>
-    <p><?=t('last_post', [tt($thread->getVar('thread_lastposted')), $thread->getLastPoster()->displayNameLabel()])?></p>
+	<h3><?= $thread->displayTitle(); ?></h3>
+	<h4><?= t('li_thread_created', [$creator->displayNameLabel(), $thread->displayCreated()]); ?></h4>
+	<p><?=t('last_post', [tt($thread->getVar('thread_lastposted')), $thread->getLastPoster()->displayNameLabel()])?></p>
   </div>
   <?= t('thread_postcount', [$thread->getPostCount()]); ?>
   <?= GDT_Icon::iconS('arrow_right'); ?>

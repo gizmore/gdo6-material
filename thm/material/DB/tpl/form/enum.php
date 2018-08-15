@@ -8,12 +8,12 @@
    ng-change="valueSelected('#gwfsel_<?= $field->name; ?>')"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>>
-    <?php if ($field->emptyLabel) : ?>
-      <md-option value="<?= $field->emptyValue; ?>"><?= $field->emptyLabel; ?></md-option>
-    <?php endif; ?>
-    <?php foreach ($field->enumValues as $enumValue) : ?>
-      <md-option value="<?= $enumValue; ?>"><?= t('enum_'.$enumValue); ?></md-option>
-    <?php endforeach; ?>
+	<?php if ($field->emptyLabel) : ?>
+	  <md-option value="<?= $field->emptyValue; ?>"><?= $field->emptyLabel; ?></md-option>
+	<?php endif; ?>
+	<?php foreach ($field->enumValues as $enumValue) : ?>
+	  <md-option value="<?= $enumValue; ?>"><?= t('enum_'.$enumValue); ?></md-option>
+	<?php endforeach; ?>
   </md-select>
   <input
    class="n"

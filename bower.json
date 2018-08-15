@@ -2,27 +2,27 @@
   "name": "gdo6-material",
   "homepage": "https://github.com/gizmore/gdo6",
   "authors": [
-    "gizmore <gizmore@wechall.net>"
+	"gizmore <gizmore@wechall.net>"
   ],
   "description": "add angular material to gdo6",
   "main": "Module_Angular.php",
   "keywords": [
-    "gdo",
-    "angular",
-    "material"
+	"gdo",
+	"angular",
+	"material"
   ],
   "license": "MIT",
   "private": true,
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+	"**/.*",
+	"node_modules",
+	"bower_components",
+	"test",
+	"tests"
   ],
   "dependencies": {
-    "angular-material": "^1.1.4",
-    "lf-ng-md-file-input": "^1.5.2",
-    "ng-material-datetimepicker": "^1.9.4"
+	"angular-material": "^1.1.4",
+	"lf-ng-md-file-input": "^1.5.2",
+	"ng-material-datetimepicker": "^1.9.4"
   }
 }

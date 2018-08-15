@@ -7,7 +7,7 @@ factory('RequestInterceptor', function($q, $injector) {
 			  return config;
 		},
 		'requestError': function(rejection) {
-	        if (!ErrorSrvc) { ErrorSrvc = $injector.get('GDOErrorSrvc'); }
+			if (!ErrorSrvc) { ErrorSrvc = $injector.get('GDOErrorSrvc'); }
 			ErrorSrvc.showNetworkError(rejection);
 			return $q.reject(rejection);
 		},
@@ -16,7 +16,7 @@ factory('RequestInterceptor', function($q, $injector) {
 		},
 		'responseError': function(rejection) {
 			console.log("RequestInterceptor::responseError()", rejection);
-	        if (!ErrorSrvc) { ErrorSrvc = $injector.get('GDOErrorSrvc'); }
+			if (!ErrorSrvc) { ErrorSrvc = $injector.get('GDOErrorSrvc'); }
 			var code = rejection.status;
 			if ((code == 403)) {
 			}

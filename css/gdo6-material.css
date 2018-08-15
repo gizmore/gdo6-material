@@ -1,10 +1,10 @@
 .md-tooltip, md-tooltip {
-    height: auto!important;
-    white-space: pre-wrap!important;
-    word-break: break-word!important;
-    padding: 0!important;
-    line-height: 18px!important;
-/*     font-size: 18px!important; */
+	height: auto!important;
+	white-space: pre-wrap!important;
+	word-break: break-word!important;
+	padding: 0!important;
+	line-height: 18px!important;
+/*	 font-size: 18px!important; */
 }
 
 a.md-button.md-icon-button,
@@ -79,43 +79,43 @@ img.gdo-captcha-img {
 }
 .gdo-has-error, .gdo-error {
 	background: #fff4f4;
-    border: 1px dotted #ccc;
-    overflow: hidden;
+	border: 1px dotted #ccc;
+	overflow: hidden;
 }
 .gdo-has-error { overflow: auto; }
 md-content.gdo-notice {
 	background: #eeffee;
-    border: 1px dotted #ccc;
-    overflow: hidden;
+	border: 1px dotted #ccc;
+	overflow: hidden;
 }
 
 /** Error/Message **/
 .gdo-error .material-icons, .gdo-message .material-icons {
-    display: inline-block;
-    width: 30px;
-    height: 28px;
-    line-height: 28px;
+	display: inline-block;
+	width: 30px;
+	height: 28px;
+	line-height: 28px;
 }
 
 .gdo-error p, .gdo-notice p {
-    font-weight: bold;
-    margin: 0;
-    line-height: 28px;
+	font-weight: bold;
+	margin: 0;
+	line-height: 28px;
 }
 .gdo-error p {
-    color: #a11;
-    line-height: 28px;
+	color: #a11;
+	line-height: 28px;
 }
 .gdo-form-error {
-    color: #a11;
-    font-weight: bold;
-    opacity: 0.7;
-    clear: both;
-    padding: 0 16px 16px;
+	color: #a11;
+	font-weight: bold;
+	opacity: 0.7;
+	clear: both;
+	padding: 0 16px 16px;
 }
 /* md-input-container .gdo-form-error { */
 /* 	top: -12px; */
-/*     position: relative; */
+/*	 position: relative; */
 /* } */
 
 md-input-container > md-select {

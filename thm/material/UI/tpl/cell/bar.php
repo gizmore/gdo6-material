@@ -11,7 +11,7 @@
  >
 <?php if ($bar->fields) : ?>
   <?php foreach ($bar->fields as $field) : ?>
-    <?= $field->render(); ?>
+	<?= $field->render(); ?>
   <?php endforeach; ?>
 <?php endif;?>
 </section>

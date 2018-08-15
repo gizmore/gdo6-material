@@ -19,35 +19,35 @@ $result = $field->getResult();
   <h3><?= $field->title; ?></h3>
   <?php endif; ?>
   <table id="gwfdt-<?= $field->name; ?>" class="table">
-    <thead>
-      <tr>
-      <?php foreach($headers as $gdoType) : ?>
-        <th class="<?= $gdoType->htmlClass(); ?>">
-          <label>
-            <?= $gdoType->renderHeader(); ?>
-            <?php if ($field->ordered) : ?>
-            <?= $gdoType->displayTableOrder($field); ?>
-            <?php endif; ?>
-          </label>
-          <?php if ($field->filtered) : ?>
-          <br/><?= $gdoType->renderFilter(); ?>
-          <?php endif; ?>
-        </th>
-      <?php endforeach; ?>
-      </tr>
-    </thead>
-    <tbody>
-    <?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
-    <tr gdo-id="<?= $gdo->getID()?>">
-      <?php foreach($headers as $gdoType) : ?>
-        <td class="<?= $gdoType->htmlClass(); ?>"><?= $gdoType->gdo($gdo)->renderCell(); ?></td>
-      <?php endforeach; ?>
-    </tr>
-    <?php endwhile; ?>
-    </tbody>
-    <tfoot>
-      <?=$field->actions()->render()?>
-    </tfoot>
+	<thead>
+	  <tr>
+	  <?php foreach($headers as $gdoType) : ?>
+		<th class="<?= $gdoType->htmlClass(); ?>">
+		  <label>
+			<?= $gdoType->renderHeader(); ?>
+			<?php if ($field->ordered) : ?>
+			<?= $gdoType->displayTableOrder($field); ?>
+			<?php endif; ?>
+		  </label>
+		  <?php if ($field->filtered) : ?>
+		  <br/><?= $gdoType->renderFilter(); ?>
+		  <?php endif; ?>
+		</th>
+	  <?php endforeach; ?>
+	  </tr>
+	</thead>
+	<tbody>
+	<?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
+	<tr gdo-id="<?= $gdo->getID()?>">
+	  <?php foreach($headers as $gdoType) : ?>
+		<td class="<?= $gdoType->htmlClass(); ?>"><?= $gdoType->gdo($gdo)->renderCell(); ?></td>
+	  <?php endforeach; ?>
+	</tr>
+	<?php endwhile; ?>
+	</tbody>
+	<tfoot>
+	  <?=$field->actions()->render()?>
+	</tfoot>
   </table>
   <input type="submit" class="n" />
 </form>

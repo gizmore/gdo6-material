@@ -9,25 +9,25 @@ use GDO\Profile\GDT_ProfileLink;
 <md-card class="gdo-card" layout-fill>
   <md-card-header>
 <?php if ($field->withCreator) : ?>
-    <md-card-avatar><?=GDT_ProfileLink::make()->forUser($field->gdoCreator())->render()?></md-card-avatar>
+	<md-card-avatar><?=GDT_ProfileLink::make()->forUser($field->gdoCreator())->render()?></md-card-avatar>
 <?php endif; ?>  
-    <md-card-header-text>
+	<md-card-header-text>
 <?php if ($field->title) : ?>
-      <span class="md-title"><?=$field->title?></span>
+	  <span class="md-title"><?=$field->title?></span>
 <?php endif; ?>
 <?php if ($field->subtitle) : ?>
-      <span class="md-subhead"><?=$field->subtitle?></span>
+	  <span class="md-subhead"><?=$field->subtitle?></span>
 <?php endif; ?>
-    </md-card-header-text>
+	</md-card-header-text>
   </md-card-header>
   <md-card-content>
 <?php foreach ($field->getFields() as $gdt) : ?>
-    <?=$gdt->render()?>
+	<?=$gdt->render()?>
 <?php endforeach; ?>
   </md-card-content>
   <gdo-div></gdo-div>
   <md-card-actions layout="row" layout-align="end center">
-    <?=$field->getActions()->render()?>
+	<?=$field->getActions()->render()?>
   </md-card-actions>
 </md-card>
 </div>

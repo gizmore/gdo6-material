@@ -10,13 +10,13 @@ $field instanceof GDT_Avatar;
    ng-model="selection"
    ng-init='init(<?= $field->displayJSON(); ?>)'
    ng-change="valueSelected('#gwfsel_<?= $field->name; ?>')">
-    <md-option value="0"><?= t('no_avatar'); ?></md-option>
-    <?php foreach ($field->choices as $value => $gwfAvatar) : $gwfAvatar instanceof GDO_Avatar; ?>
-    <md-option value="<?= $value; ?>">
-      <?= $gwfAvatar->getGDOAvatar($field->user)->renderCell(); ?>
-      <?= $gwfAvatar->getVar('file_name'); ?>
-    </md-option>
-    <?php endforeach; ?>
+	<md-option value="0"><?= t('no_avatar'); ?></md-option>
+	<?php foreach ($field->choices as $value => $gwfAvatar) : $gwfAvatar instanceof GDO_Avatar; ?>
+	<md-option value="<?= $value; ?>">
+	  <?= $gwfAvatar->getGDOAvatar($field->user)->renderCell(); ?>
+	  <?= $gwfAvatar->getVar('file_name'); ?>
+	</md-option>
+	<?php endforeach; ?>
   </md-select>
   <input
    class="n"

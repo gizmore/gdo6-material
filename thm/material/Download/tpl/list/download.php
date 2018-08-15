@@ -31,7 +31,7 @@ $levelTooltip = GDT_LevelPopup::make()->level($download->getLevel())->render();
 $editButton = '';
 if ($download->canEdit($user))
 {
-    $editButton .= GDT_EditButton::make()->gdo($download)->renderCell();
+	$editButton .= GDT_EditButton::make()->gdo($download)->renderCell();
 }
 
 $downloadButton = sprintf('<md-button class="md-icon-button" href="%s" ng-disabled="%s">', $download->href_download(), $download->canDownload($user)?0:1);
@@ -48,14 +48,14 @@ $payButton .= "</md-button>\n";
  class="md-3-line <?=$payClass;?> <?=$buyClass;?>"
  hrex="<?= href('Download', 'View', "&id=$id"); ?>">
   <div class="md-list-item-text" layout="column">
-    <h3><?= $editButton; ?><?= html($download->getTitle()); ?><?= $infoTooltip; ?></h3>
-    <h4><?= $download->displayInfoText(); ?></h4>
-    <p>
-      <?= $downloadButton; ?>
-      <?= $levelTooltip; ?>
-      <?= $payButton; ?>
-      <?= $voteButton; ?>
-    </p>
+	<h3><?= $editButton; ?><?= html($download->getTitle()); ?><?= $infoTooltip; ?></h3>
+	<h4><?= $download->displayInfoText(); ?></h4>
+	<p>
+	  <?= $downloadButton; ?>
+	  <?= $levelTooltip; ?>
+	  <?= $payButton; ?>
+	  <?= $voteButton; ?>
+	</p>
   </div>
 </md-list-item>
 
@@ -63,13 +63,13 @@ $payButton .= "</md-button>\n";
 <!-- Dialog Purchase -->
 <div style="visibility: hidden">
   <div class="md-dialog-container" id="DialogDownloadBuy_<?= $id; ?>">
-    <md-dialog layout-padding>
-      <h2><?= t('dlg_download_purchase_title'); ?></h2>
-      <p>
-      <?= t('li_download_price', [$download->displayPrice()]); ?><br/>
-      <?= GDT_Button::make('btn_purchase')->href(href('Download', 'Order', "&id=$id")); ?>
-      </p>
-    </md-dialog>
+	<md-dialog layout-padding>
+	  <h2><?= t('dlg_download_purchase_title'); ?></h2>
+	  <p>
+	  <?= t('li_download_price', [$download->displayPrice()]); ?><br/>
+	  <?= GDT_Button::make('btn_purchase')->href(href('Download', 'Order', "&id=$id")); ?>
+	  </p>
+	</md-dialog>
   </div>
 </div>
 

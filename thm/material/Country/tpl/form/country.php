@@ -16,19 +16,19 @@ $field instanceof GDT_Country;
    ng-init="selection='<?= $field->displayVar(); ?>'"
    ng-change="valueSelected('#gwfsel_<?= $field->name; ?>')">
    <?php } ?>
-    <?php if ($field->emptyLabel) : ?>
-      <md-option value="<?= $field->emptyValue; ?>">
-        <img
-         class="gdo-country"
-         src="/theme/default/img/country/zz.png" />
-        <?= $field->emptyLabel; ?>
-      </md-option>
-    <?php endif; ?>
-    <?php foreach ($field->choices as $value => $country) : $country instanceof GDO_Country; ?>
-      <md-option value="<?= htmlspecialchars($value); ?>">
-        <?= $country->renderChoice(); ?>
-      </md-option>
-    <?php endforeach; ?>
+	<?php if ($field->emptyLabel) : ?>
+	  <md-option value="<?= $field->emptyValue; ?>">
+		<img
+		 class="gdo-country"
+		 src="/theme/default/img/country/zz.png" />
+		<?= $field->emptyLabel; ?>
+	  </md-option>
+	<?php endif; ?>
+	<?php foreach ($field->choices as $value => $country) : $country instanceof GDO_Country; ?>
+	  <md-option value="<?= htmlspecialchars($value); ?>">
+		<?= $country->renderChoice(); ?>
+	  </md-option>
+	<?php endforeach; ?>
   </md-select>
   <input
    class="n"

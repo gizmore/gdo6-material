@@ -9,26 +9,26 @@ $options['readOnly'] = !$field->writable;
 $options['disabled'] = $field->disabled;
 if ($field->maxRange > 0)
 {
-    $options['minRange'] = $field->minRange;
-    $options['maxRange'] = $field->maxRange;
-    $options['enforceRange'] = true;
+	$options['minRange'] = $field->minRange;
+	$options['maxRange'] = $field->maxRange;
+	$options['enforceRange'] = true;
 }
 if (is_array($field->step))
 {
-    $optArray = [];
-    foreach ($field->step as $value => $label)
-    {
-        $optArray[] = ["value"=>$value, "label"=>$label];
-    }
-    $options['stepsArray'] = $optArray;
+	$optArray = [];
+	foreach ($field->step as $value => $label)
+	{
+		$optArray[] = ["value"=>$value, "label"=>$label];
+	}
+	$options['stepsArray'] = $optArray;
 }
 elseif ($field->step > 0)
 {
-    $options['step'] = $field->step;
-    if ($field->step < 1)
-    {
-        $options['precision'] = ceil(log10(1 / $field->step));
-    }
+	$options['step'] = $field->step;
+	if ($field->step < 1)
+	{
+		$options['precision'] = ceil(log10(1 / $field->step));
+	}
 }
 ?>
 <md-input-container
@@ -43,11 +43,11 @@ elseif ($field->step > 0)
    for="form[<?= $field->name; ?>]"><?= $field->label; ?> </label>
 
   <div ng-init='init("#<?=$fieldId;?>", true); slidervalue=<?=$field->getLow();?>; sliderhigh=<?=$field->getHigh();?>;'>
-    <rzslider
-     rz-slider-model="slidervalue"
-     rz-slider-high="sliderhigh"
-     rz-slider-options='<?= json_encode($options); ?>'>
-    </rzslider>
+	<rzslider
+	 rz-slider-model="slidervalue"
+	 rz-slider-high="sliderhigh"
+	 rz-slider-options='<?= json_encode($options); ?>'>
+	</rzslider>
   </div>
 
   <input

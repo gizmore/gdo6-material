@@ -19,10 +19,10 @@ $id = 'gwftag_'.$field->name; ?>
    <?= $field->htmlRequired(); ?>
    placeholder="<?= $field->label; ?>">
    <md-autocomplete
-    md-search-text="searchText"
-    md-items="item in completeTags(searchText)">
+	md-search-text="searchText"
+	md-items="item in completeTags(searchText)">
    <md-item-template>
-     <div md-highlight-text="searchText" md-highlight-flags="^i">{{item}}</div>
+	 <div md-highlight-text="searchText" md-highlight-flags="^i">{{item}}</div>
    </md-item-template>
    </md-autocomplete>
   </md-chips>

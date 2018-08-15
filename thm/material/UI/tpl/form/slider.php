@@ -7,21 +7,21 @@ $options['ceil'] = $field->max;
 $options['floor'] = $field->min;
 if (is_array($field->step))
 {
-    $optArray = [];
-    foreach ($field->step as $value => $label)
-    {
-        $optArray[] = ["value"=>$value, "legend"=>$label];
-    }
-    $options['stepsArray'] = $optArray;
-    $options['showTicks'] = true;
+	$optArray = [];
+	foreach ($field->step as $value => $label)
+	{
+		$optArray[] = ["value"=>$value, "legend"=>$label];
+	}
+	$options['stepsArray'] = $optArray;
+	$options['showTicks'] = true;
 }
 elseif ($field->step > 0)
 {
-    $options['step'] = $field->step;
-    if ($field->step < 1)
-    {
-        $options['precision'] = ceil(log10(1 / $field->step));
-    }
+	$options['step'] = $field->step;
+	if ($field->step < 1)
+	{
+		$options['precision'] = ceil(log10(1 / $field->step));
+	}
 }
 ?>
 <md-input-container
@@ -36,10 +36,10 @@ elseif ($field->step > 0)
    for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
 
   <div ng-init='init("#<?=$fieldId;?>"); slidervalue=<?= $field->getVar(); ?>'>
-    <rzslider
-     rz-slider-model="slidervalue"
-     rz-slider-options='<?= json_encode($options); ?>'>
-    </rzslider>
+	<rzslider
+	 rz-slider-model="slidervalue"
+	 rz-slider-options='<?= json_encode($options); ?>'>
+	</rzslider>
   </div>
 
   <input
