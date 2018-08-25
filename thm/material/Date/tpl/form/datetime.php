@@ -1,6 +1,6 @@
 <?php
-use GDO\Date\GDT_Timestamp;
-$field instanceof GDT_Timestamp;
+use GDO\Date\GDT_DateTime;
+$field instanceof GDT_DateTime;
 $id = 'date_'.$field->name;
 ?>
 <md-input-container
