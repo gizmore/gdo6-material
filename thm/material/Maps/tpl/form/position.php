@@ -7,7 +7,7 @@ $field instanceof GDT_Position;
  class="md-block md-float md-icon-left<?= $field->classError(); ?>"
  flex ng-controller="GDOPositionCtrl"
  ng-init='init(<?= json_encode($field->initJSON()); ?>)'>
-  <label for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
+  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= GDT_Icon::iconS('gps_fixed'); ?>
   <input
    ng-click="onPick()"

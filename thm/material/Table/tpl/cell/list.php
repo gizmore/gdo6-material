@@ -42,7 +42,7 @@ echo $pagemenu ? $pagemenu->renderCell() : null;
 			  <form method="get" action="<?= $field->href ?>">
 <?php foreach ($fields as $gdoType) : ?>
 				<md-input-container>
-				  <label><?= @$gdoType->label; ?></label>
+				  <label><?= @$gdoType->displayLabel(); ?></label>
 				  <?= $gdoType->renderFilter(); ?>
 				</md-input-container>
 <?php endforeach; ?>
@@ -55,7 +55,7 @@ echo $pagemenu ? $pagemenu->renderCell() : null;
 		  <md-tab label="Sorting">
 			<md-content class="md-padding">
 <?php foreach ($fields as $gdoType) : ?>
-			  <label><?= @$gdoType->label; ?></label>
+			  <label><?= @$gdoType->displayLabel(); ?></label>
 			  <?= $gdoType->displayTableOrder($field)?>
 <?php endforeach; ?>
 			</md-content>

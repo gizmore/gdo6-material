@@ -6,7 +6,7 @@ $field instanceof GDT_Enum;
  ng-controller="GDOSelectCtrl"
  ng-model="selection"
  multiple="true"
- placeholder="<?= html($field->label); ?>"
+ placeholder="<?= html($field->displayLabel()); ?>"
  ng-init='multiple=true; selection=<?=json_encode($field->filterValue()); ?>;'
  ng-change="multiValueSelected('#fsel_<?= $field->name; ?>')">
   <?php foreach ($field->enumValues as $enumValue) : ?>

@@ -4,7 +4,7 @@ use GDO\Avatar\GDT_Avatar;
 $field instanceof GDT_Avatar;
 ?>
 <md-input-container class="md-block md-float md-icon-left" flex>
-  <label><?= $field->label; ?></label>
+  <label><?= $field->displayLabel(); ?></label>
   <md-select
    ng-controller="GDOSelectCtrl"
    ng-model="selection"

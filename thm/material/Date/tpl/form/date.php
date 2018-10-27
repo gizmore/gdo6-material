@@ -5,7 +5,7 @@ $id = 'date_'.$field->name;
  class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex
  ng-controller="GDODatepickerCtrl">
   <?= $field->htmlIcon(); ?>
-  <label><?= $field->label; ?></label>
+  <label><?= $field->displayLabel(); ?></label>
   <input
    mdc-datetime-picker=""
    ng-model="pickDate"
@@ -13,7 +13,7 @@ $id = 'date_'.$field->name;
    ng-change="datePicked('#<?= $id ?>')"
    date="true"
    time="false"
-   placeholder="<?= $field->label; ?>"
+   placeholder="<?= $field->displayLabel(); ?>"
    minutes="true"
    min-date="'<?= $field->minDate; ?>'"
    max-date="'<?= $field->maxDate; ?>'"

@@ -1,6 +1,6 @@
 <?php /** @var $field \GDO\Form\GDT_Select **/ ?>
 <md-input-container class="md-block md-float md-icon-left<?=$field->classError()?>" flex>
-  <label><?= $field->label; ?></label>
+  <label><?= $field->displayLabel(); ?></label>
   <md-select
 <?php if ($field->multiple) : ?>
    multiple

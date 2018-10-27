@@ -3,5 +3,5 @@
 $field->addClass('md-icon-button');
 ?>
 <?php if ($href) : ?>
-<md-button href="<?=$href?>"<?=$field->htmlAttributes()?>aria-label="<?=html($field->label)?>" <?=$field->htmlDisabled()?>><?=$field->htmlIcon()?><?=$field->label?></md-button>
+<md-button href="<?=$href?>"<?=$field->htmlAttributes()?>aria-label="<?=html($field->displayLabel())?>" <?=$field->htmlDisabled()?>><?=$field->htmlIcon()?><?=$field->displayLabel()?></md-button>
 <?php endif; ?>

@@ -1,6 +1,6 @@
 <?php /** @var $field \GDO\Form\GDT_Enum **/ ?>
 <md-input-container class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex ng-app="gdo-select">
-  <label><?= $field->label; ?></label>
+  <label><?= $field->displayLabel(); ?></label>
   <md-select
    ng-controller="GDOSelectCtrl"
    ng-model="selection"

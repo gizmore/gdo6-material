@@ -6,7 +6,7 @@ $id = 'gwftag_'.$field->name; ?>
  class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex
  ng-controller="GDOTagCtrl"
  ng-init='init("#<?= $id; ?>", <?= $field->displayJSON(); ?>)'>
-  <label for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
+  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
   <md-chips
    ng-model="tags"
@@ -17,7 +17,7 @@ $id = 'gwftag_'.$field->name; ?>
    md-max-chips="<?= $field->maxTags; ?>"
    readonly="<?= $field->writable?'false':'true'; ?>"
    <?= $field->htmlRequired(); ?>
-   placeholder="<?= $field->label; ?>">
+   placeholder="<?= $field->displayLabel(); ?>">
    <md-autocomplete
 	md-search-text="searchText"
 	md-items="item in completeTags(searchText)">

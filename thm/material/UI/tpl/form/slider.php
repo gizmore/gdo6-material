@@ -33,7 +33,7 @@ elseif ($field->step > 0)
 
   <label
    class="md-no-float md-container-ignore"
-   for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
+   for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
 
   <div ng-init='init("#<?=$fieldId;?>"); slidervalue=<?= $field->getVar(); ?>'>
 	<rzslider

@@ -1,7 +1,7 @@
 <?php /** @var $field \GDO\UI\GDT_Message **/
 ?>
 <md-input-container class="md-block md-float <?= $field->classError(); ?>" flex>
-  <label for="form[<?= $field->name; ?>]"><?= $field->htmlIcon(); ?><?= $field->label; ?></label>
+  <label for="form[<?= $field->name; ?>]"><?= $field->htmlIcon(); ?><?= $field->displayLabel(); ?></label>
   <textarea
    novalidate
    class="<?=$field->classEditor()?>"

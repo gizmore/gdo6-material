@@ -3,7 +3,7 @@ use GDO\UI\GDT_Color;
 $field instanceof GDT_Color;
 ?>
 <md-input-container class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex>
-  <label for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
+  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
   <input
    type="color"

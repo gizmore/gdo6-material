@@ -26,9 +26,9 @@
 		<input type="hidden" name="me" value="<?=html(me())?>" />
 	  <?php endif; ?>
 	  <?php foreach ($form->fields as $field) : ?>
-		<?php if ($field->writable) : ?>
+		<?php # if ($field->writable) : ?>
 		  <?= $field->renderForm(); ?>
-		<?php endif; ?>
+		<?php # endif; ?>
 	  <?php endforeach; ?>
 	</form>
 	</div>

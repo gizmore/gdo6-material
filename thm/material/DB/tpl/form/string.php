@@ -1,7 +1,7 @@
 <?php /** @var $field \GDO\DB\GDT_String **/ ?>
 <md-input-container class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex>
   <?= $field->htmlIcon(); ?>
-  <label for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
+  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <input
    type="text"
    <?= $field->htmlRequired(); ?>
