@@ -42,7 +42,7 @@ echo $pagemenu ? $pagemenu->renderCell() : null;
 			  <form method="get" action="<?= $field->href ?>">
 <?php foreach ($fields as $gdoType) : ?>
 				<md-input-container>
-				  <label><?= @$gdoType->displayLabel(); ?></label>
+				  <label><?= $gdoType->displayLabel(); ?></label>
 				  <?= $gdoType->renderFilter(); ?>
 				</md-input-container>
 <?php endforeach; ?>
