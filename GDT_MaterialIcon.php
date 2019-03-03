@@ -32,6 +32,7 @@ final class GDT_MaterialIcon
 			'email' => 'email',
 			'error' => 'report_problem',
 			'file' => 'attachment',
+			'group' => 'group',
 			'help' => 'help',
 			'image' => 'image',
 			'left' => 'chevron-left',
@@ -41,6 +42,7 @@ final class GDT_MaterialIcon
 			'menu' => 'menu',
 			'message' => 'line_style',
 			'pause' => 'pause',
+			'person_add' => 'person_add',
 			'quote' => 'message',
 			'remove' => 'minus',
 			'refresh' => 'refresh',
@@ -58,6 +60,7 @@ final class GDT_MaterialIcon
 			'upload' => 'upload',
 			'url' => 'language',
 			'view' => 'play_arrow',
+			'wait' => 'hourglass_empty',
 		);
 		if (!isset($map[$icon]))
 		{
