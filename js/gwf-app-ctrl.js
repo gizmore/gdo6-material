@@ -27,6 +27,14 @@ controller('GDOAppCtrl', function($scope, $mdSidenav, $mdDialog) {
 			clickOutsideToClose: true
 		});
 	};
+	
+	$scope.alert = function(msg) {
+		window.alert(msg);
+	};
+	
+	$scope.log = function(obj) {
+		console.log(obj);
+	};
 
 	$scope.init();
 });

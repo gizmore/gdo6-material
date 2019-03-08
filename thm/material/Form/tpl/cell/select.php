@@ -1,7 +1,6 @@
 <?php /** @var $field \GDO\Form\GDT_Select **/ ?>
-<md-input-container class="md-block md-float md-icon-left<?=$field->classError()?>" flex>
-  <label><?= $field->displayLabel(); ?></label>
   <md-select
+  <?php echo $field->htmlAttributes(); ?>
 <?php if ($field->multiple) : ?>
    multiple
 <?php endif; ?>
@@ -19,7 +18,6 @@
 	  </md-option>
 	<?php endforeach; ?>
   </md-select>
-  <div class="gdo-form-error"><?= $field->error; ?></div>
   <input
    <?php echo $field->htmlAttributes(); ?>
    class="n"
@@ -27,4 +25,3 @@
    id="gwfsel_<?= $field->name; ?>"
    value="<?= html($field->getSelectedVar()); ?>"
    name="form[<?= $field->name?>]" />
-</md-input-container>
