@@ -1,0 +1,14 @@
+{
+  "name": "gdo6-material",
+  "version": "6.09",
+  "description": "Angular material module for GDO6",
+  "main": "Module_Material.php",
+  "repository": "ssh://git@github.com/gizmore/gdo6-material",
+  "author": "gizmore",
+  "license": "MIT",
+  "dependencies": {
+    "angular-material": "^1.1.19",
+    "lf-ng-md-file-input": "^1.5.3",
+    "ng-material-datetimepicker": "^1.18.5"
+  }
+}
