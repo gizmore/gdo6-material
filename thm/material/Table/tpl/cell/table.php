@@ -12,7 +12,7 @@ $result = $field->getResult();
  flex layout-fill layout-align="center"
  ng-controller="GDOTableCtrl"
  ng-init='init(<?=json_encode($field->configJSON())?>)'>
-<form method="get" action="<?= $field->href; ?>" class="ib">
+<form method="get" action="<?= $field->href; ?>" class="b">
   <input type="hidden" name="mo" value="<?= html(Common::getGetString('mo','')); ?>" />
   <input type="hidden" name="me" value="<?= html(Common::getGetString('me','')); ?>" />
   <?php if ($field->title) : ?>
