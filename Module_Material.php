@@ -17,6 +17,8 @@ final class Module_Material extends GDO_Module
 {
 	public $module_priority = 20;
 	
+	public function getDependencies() { return ['Angular']; }
+	
 	public function getThemes() { return ['material']; }
 	
 	public function onInit()
