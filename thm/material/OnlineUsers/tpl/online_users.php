@@ -18,9 +18,9 @@ $onlineUsers = implode(', ', array_slice($ausers, 0, $max));
 
 if ($online > $max)
 {
-	echo GDT_Tooltip::with(t('num_online_more', [$online, $onlineUsers, ($max-$online)]));
+	echo GDT_Tooltip::make()->tooltip('num_online_more', [$online, $onlineUsers, ($max-$online)])->render();
 }
 else 
 {
-	echo GDT_Tooltip::with(t('num_online', [$online, $onlineUsers]));
+	echo GDT_Tooltip::make()->tooltip('num_online', [$online, $onlineUsers])->render();
 }

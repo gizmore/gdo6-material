@@ -45,10 +45,10 @@ md-input-container.gdt-rangeslider {
 /** Table **/
 td.gdo-button { padding: 0!important; }
 td.gdo-button .md-button { margin: 0; }
-img.gdo-country, img.gdo-language { width: 42px; }
+/* img.gdo-country, img.gdo-language { width: 42px; } */
 .gdo-table table tbody tr td { padding: 2px 8px; }
-.gdo-table table tbody tr td { text-align: center; vertical-align: middle; font-size: 16px; }
-.gdo-table table tbody tr td.gdo-num { font-family: monospace; text-align: right; padding-right: 18px; }
+.gdo-table table tbody tr td { vertical-align: middle; font-size: 16px; }
+.gdo-table table tbody tr td.gdt-num { text-align: right; padding-right: 18px; }
 .gdo-table table tbody tr td.gdo-rownum div { position: relative; padding: 0; left: 12px; top: 12px; }
 /* .gdo-table table .gdo-num, .gdo-table table .gdo-rownum { max-width: 80px; } */
 .gdo-tblorder a.sel { color: gold; }
