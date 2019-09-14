@@ -9,7 +9,7 @@ $id = 'gwftag_'.$field->name; ?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= $field->htmlIcon(); ?>
   <md-chips
-   ng-model="tags"
+   ng-model="data.tags"
    md-on-add="onChange()"
    md-on-remove="onChange()"
    md-removable="removable"
