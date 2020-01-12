@@ -9,7 +9,7 @@
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>>
 	<?php if ($field->emptyLabel) : ?>
-	  <md-option value="<?= $field->emptyValue; ?>"><?= $field->emptyLabel; ?></md-option>
+	  <md-option value="<?= $field->emptyValue; ?>"><?= $field->displayEmptyLabel(); ?></md-option>
 	<?php endif; ?>
 	<?php foreach ($field->enumValues as $enumValue) : ?>
 	  <md-option value="<?= $enumValue; ?>"><?= t('enum_'.$enumValue); ?></md-option>

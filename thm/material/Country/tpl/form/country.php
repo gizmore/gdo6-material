@@ -21,7 +21,7 @@ $field instanceof GDT_Country;
 		<img
 		 class="gdo-country"
 		 src="/theme/default/img/country/zz.png" />
-		<?= $field->emptyLabel; ?>
+		<?= $field->displayEmptyLabel(); ?>
 	  </md-option>
 	<?php endif; ?>
 	<?php foreach ($field->choices as $value => $country) : $country instanceof GDO_Country; ?>
