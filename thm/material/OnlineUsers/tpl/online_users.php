@@ -5,7 +5,7 @@ use GDO\OnlineUsers\Module_OnlineUsers;
 $users = $field->getOnlineUsers();
 $ausers = [];
 $max = Module_OnlineUsers::instance()->cfgNumOnline();
-foreach ($users as $data)
+foreach ($users['users'] as $data)
 {
 	/** @var $user \GDO\User\GDO_User **/
 	list ($t, $user) = $data;
