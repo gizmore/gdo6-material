@@ -1,4 +1,4 @@
-<?php /** @var $field \GDO\Form\GDT_Enum **/ ?>
+<?php /** @var $field GDO\DB\GDT_Enum **/ ?>
 <md-input-container class="md-block md-float md-icon-left<?= $field->classError(); ?>" flex ng-app="gdo-select">
   <label><?= $field->displayLabel(); ?></label>
   <md-select
