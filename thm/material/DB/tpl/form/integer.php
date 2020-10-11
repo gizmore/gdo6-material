@@ -4,7 +4,7 @@
   <?=$field->htmlIcon()?>
   <input
    type="number"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    <?= $field->htmlDisabled(); ?>
    <?= $field->htmlRequired(); ?>
    min="<?= $field->min; ?>"

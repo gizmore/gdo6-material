@@ -20,6 +20,6 @@
    type="hidden"
    id="gwfsel_<?= $field->name; ?>"
    value="<?= $field->displayVar(); ?>"
-   name="form[<?= $field->name?>]" />
+   <?=$field->htmlFormName()?> />
   <?=$field->htmlError()?>
 </md-input-container>

@@ -17,7 +17,7 @@ $field instanceof GDT_OpenHours;
    ng-click="openHoursDialog($event)"
    ng-model="data.openHours.display"
    type="text"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlPattern(); ?>

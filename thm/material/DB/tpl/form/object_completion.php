@@ -26,7 +26,7 @@ $id = 'gwfac_'.$field->name;
   <input
    type="hidden"
    id="<?= $id; ?>"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->getVar(); ?>" />
  <?= $field->htmlError()?>
 </md-input-container>

@@ -11,7 +11,7 @@ $field instanceof GDT_Captcha;
    pattern="[a-zA-Z]{5}"
    required="required"
    style="width:120px; clear: both;"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= html($field->getVar()); ?>"/>
   <br/>
   <br/>

@@ -7,7 +7,7 @@ $field instanceof GDT_Color;
   <?= $field->htmlIcon(); ?>
   <input
    type="color"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= html($field->getVar()); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>/>

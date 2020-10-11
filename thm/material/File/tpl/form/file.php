@@ -43,6 +43,6 @@ $field instanceof GDT_File;
   <input
    type="hidden"
    id="gwffile_<?php echo $field->name; ?>"
-   name="form[<?php echo $field->name; ?>]" />
+   <?=$field->htmlFormName()?> />
 </md-input-container>
 </div>

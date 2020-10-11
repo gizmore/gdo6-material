@@ -5,7 +5,7 @@
   <textarea
    novalidate
    class="<?=$field->classEditor()?>"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    rows="6"
    maxRows="6"
    <?= $field->htmlDisabled(); ?>><?= $field->getVar(); ?></textarea>

@@ -29,7 +29,7 @@ $id = 'gwftag_'.$field->name; ?>
   <input
    type="hidden"
    id="<?= $id; ?>"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlDisabled(); ?>/>
   <div class="gdo-form-error"><?= $field->error; ?></div>

@@ -26,5 +26,5 @@
    type="hidden"
    id="gwfsel_<?= $field->name; ?>"
    value="<?= html($field->getSelectedVar()); ?>"
-   name="form[<?= $field->name?>]" />
+   <?=$field->htmlFormName()?> />
 </md-input-container>

@@ -45,7 +45,7 @@ elseif ($field->step > 0)
   <input
    type="hidden"
    id="<?= $fieldId; ?>"
-   name="form[<?= $field->name?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->getVar(); ?>" />
 
   <div class="gdo-form-error"><?= $field->error; ?></div>

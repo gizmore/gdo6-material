@@ -8,7 +8,7 @@ $field instanceof GDT_Object;
   <input
    type="number"
    step="1"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlDisabled(); ?>/>

@@ -26,7 +26,7 @@ $id = 'date_'.$field->name;
   <input
    id="<?= $id; ?>"
    type="hidden"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->getVar(); ?>" />
 </md-input-container>
  

@@ -9,7 +9,7 @@
    min="<?= $field->min; ?>"
    max="<?= $field->max; ?>"
    size="<?= min($field->max, 32); ?>"
-   name="form[<?= $field->name; ?>]"
+   <?=$field->htmlFormName()?>
    value="<?= $field->getVar(); ?>" />
   <?=$field->htmlError()?>
 </md-input-container>

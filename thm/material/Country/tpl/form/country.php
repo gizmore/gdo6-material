@@ -35,6 +35,6 @@ $field instanceof GDT_Country;
    type="hidden"
    id="gwfsel_<?= $field->name; ?>"
    value="<?= $field->displayVar(); ?>"
-   name="form[<?= $field->name?>]" />
+   <?=$field->htmlFormName()?> />
   <div class="gdo-error"><?= $field->error; ?></div>
 </md-input-container>
