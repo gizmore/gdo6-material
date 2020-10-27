@@ -5,6 +5,7 @@ use GDO\Core\GDO_Module;
 use GDO\Core\Module_Core;
 use GDO\UI\GDT_Icon;
 use GDO\Core\Website;
+use GDO\Core\Application;
 
 /**
  * Angular Material Design Theme
@@ -28,7 +29,7 @@ final class Module_Material extends GDO_Module
 
 	public function onIncludeScripts()
 	{
-		$min = Module_Core::instance()->cfgMinifyJS() !== 'no' ? '.min' : '';
+        $min = Module_Core::instance()->cfgMinifyJS() !== 'no' ? '.min' : '';
 		
 		# Material
 		$this->addBowerJavascript("angular-animate/angular-animate$min.js");
@@ -53,12 +54,15 @@ final class Module_Material extends GDO_Module
 	
 	private function onIncludeGDOScripts()
 	{
-		$this->addCSS("css/gdo6-material.css");
-		
-		$this->addJavascript('js/gdo-module.js');
-		
-		$this->addJavascript('js/gwf-app-ctrl.js');
-		$this->addJavascript('js/gwf-error-srvc.js');
-		$this->addJavascript('js/gwf-request-interceptor.js');
+	    if (in_array('material', Application::instance()->getThemes(), true))
+	    {
+    		$this->addCSS("css/gdo6-material.css");
+    		
+    		$this->addJavascript('js/gdo-module.js');
+    		
+    		$this->addJavascript('js/gwf-app-ctrl.js');
+    		$this->addJavascript('js/gwf-error-srvc.js');
+    		$this->addJavascript('js/gwf-request-interceptor.js');
+	    }
 	}
 }
