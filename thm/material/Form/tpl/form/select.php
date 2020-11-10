@@ -7,7 +7,7 @@
 <?php endif; ?>
    ng-controller="GDOSelectCtrl"
    ng-model="selection"
-   ng-init='init(<?=$field->displayJSON()?>)'
+   ng-init='init(<?=$field->displayConfigJSON()?>)'
    ng-change="multiValueSelected('#gwfsel_<?= $field->name; ?>')"
    <?= $field->htmlDisabled(); ?>>
    <?php if ($field->emptyLabel) : ?>
@@ -19,7 +19,9 @@
 	  </md-option>
 	<?php endforeach; ?>
   </md-select>
+<?php if ($field->error) : ?>
   <div class="gdo-form-error"><?= $field->error; ?></div>
+<?php endif; ?>
   <input
    <?php echo $field->htmlAttributes(); ?>
    class="n"

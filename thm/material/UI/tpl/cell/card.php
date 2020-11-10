@@ -1,33 +1,63 @@
 <?php
 /** @var $field \GDO\UI\GDT_Card **/
-use GDO\Profile\GDT_ProfileLink;
+$field->addClass('gdt-card');
 ?>
+<div layout-padding layout-fill <?=$field->htmlAttributes()?>>
+
 <?php if ($field->gdo) : ?>
-<a name="card-<?=$field->gdo->getID()?>"></a>
+  <a id="card-<?=$field->gdo->getID()?>" class="n"></a>
 <?php endif; ?>
-<div layout-padding layout-fill>
-<md-card class="gdo-card" layout-fill>
-  <md-card-header>
-<?php if ($field->withCreator) : ?>
-	<md-card-avatar><?=GDT_ProfileLink::make()->forUser($field->gdoCreator())->render()?></md-card-avatar>
-<?php endif; ?>  
-	<md-card-header-text>
+
+  <md-card class="gdo-card" layout-fill>
+
+<?php if ($field->avatar || $field->title || $field->subtitle) : ?>
+    <md-card-header>
+<?php if ($field->avatar) : ?>
+      <md-card-avatar><?=$field->avatar->renderCell()?></md-card-avatar>
+<?php endif; ?>
+<?php if ($field->title || $field->subtitle) : ?>
+      <md-card-header-text>
 <?php if ($field->title) : ?>
-	  <span class="md-title"><?=$field->title?></span>
+        <span class="md-title"><?=$field->title->renderCell()?></span>
 <?php endif; ?>
 <?php if ($field->subtitle) : ?>
-	  <span class="md-subhead"><?=$field->subtitle?></span>
+        <span class="md-subhead"><?=$field->subtitle->renderCell()?></span>
 <?php endif; ?>
-	</md-card-header-text>
-  </md-card-header>
+      </md-card-header-text>
+<?php endif; ?>
+    </md-card-header>
+<?php endif; ?>
+
+<?php if ($field->image || $field->content || $field->fields) : ?>
   <md-card-content>
-<?php foreach ($field->getFields() as $gdt) : ?>
-	<?=$gdt->render()?>
-<?php endforeach; ?>
+<?php if ($field->image) : ?>
+    <div class="gdt-card-image"><?=$field->image->renderCell()?></div>
+<?php endif; ?>
+<?php if ($field->content) : ?>
+    <div class="gdt-card-content"><?=$field->content->renderCell()?></div>
+<?php endif; ?>
+<?php if ($field->fields) : ?>
+    <div class="gdt-card-fields">
+    <?php foreach ($field->fields as $gdt) : ?>
+      <?=$gdt->renderCard()?>
+    <?php endforeach; ?>
+    </div>
+<?php endif; ?>
   </md-card-content>
-  <gdo-div></gdo-div>
+<?php endif; ?>
+
+<?php if ($field->footer || $field->actions) : ?>
+  <div class="gdt-card-lower">
+<?php if ($field->footer) : ?>
+    <div class="gdt-card-footer"><?=$field->footer->renderCell()?></div>
+<?php endif; ?>
+<?php if ($field->actions) : ?>
   <md-card-actions layout="row" layout-align="end center">
-	<?=$field->getActions()->render()?>
+    <?=$field->actions()->renderCell()?>
   </md-card-actions>
-</md-card>
+<?php endif; ?>
+  </div>
+<?php endif; ?>
+
+  </md-card>
 </div>

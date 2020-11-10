@@ -1,7 +1,6 @@
 <?php /** @var $page \GDO\UI\GDT_Page **/
 use GDO\Core\Website;
 use GDO\Util\Javascript;
-use GDO\UI\GDT_Bar;
 use GDO\UI\GDT_Icon;
 use GDO\Core\Module_Core;
 ?>
@@ -23,7 +22,7 @@ use GDO\Core\Module_Core;
 		<md-button class="md-icon-button" aria-label="<?= t('btn_left_menu'); ?>" ng-disabled="data.leftMenu.disabled" ng-click="openLeft()">
 		  <?= GDT_Icon::iconS('menu'); ?>
 		</md-button>
-		<?= GDT_Bar::make()->horizontal()->yieldHook('TopBar'); ?>
+		<?=$page->topNav->renderCell()?>
 		<md-button class="md-icon-button" aria-label="<?= t('btn_right_menu'); ?>" ng-disabled="data.rightMenu.disabled" ng-click="openRight()">
 		  <?= GDT_Icon::iconS('menu'); ?>
 		</md-button>
@@ -36,16 +35,15 @@ use GDO\Core\Module_Core;
   
 	  <!-- LEFT SIDENAV -->
 	  <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
-		<?= GDT_Bar::make()->yieldHook('LeftBar'); ?>
+		<?=$page->leftNav->renderCell()?>
 	  </md-sidenav>
 	  <!-- END LEFT SIDENAV -->
 
 	  <!-- CONTENT -->
-	  <md-content flex class="gdo-main">
-		<div layout="column" layout-align="top center">
-		  <?= $page->html; ?>
-		</div>
-		<div flex></div>
+	  <md-content class="gdo-main" layout="column" layout-align="top center" layout-fill>
+		  <?=$page->topTabs->renderCell()?>
+		  <?=Website::renderTopResponse()?>
+		  <?=$page->html?>
 	  </md-content>
 	  <!-- END CONTENT -->
 
@@ -54,7 +52,7 @@ use GDO\Core\Module_Core;
 		<md-toolbar class="md-theme-light">
 		  <h1 class="md-toolbar-tools"><?= t('sidenav_right_title'); ?></h1>
 		</md-toolbar>
-		<?= GDT_Bar::make()->yieldHook('RightBar'); ?>
+		<?=$page->rightNav->renderCell()?>
 	  </md-sidenav>
 	  <!-- END RIGHT SIDENAV -->
 
@@ -62,13 +60,11 @@ use GDO\Core\Module_Core;
 	
 	<!-- BEGIN FOOTER -->
 	<footer class="md-whiteframe-4dp" layout="row" layout-align="center center">
-		<?= GDT_Bar::make()->yieldHook('BottomBar'); ?>
+		<?=$page->bottomNav->renderCell()?>
 	</footer>
 	<!-- END FOOTER -->
 
-	<!-- JS -->
-		<?= Javascript::displayJavascripts(Module_Core::instance()->cfgMinifyJS() === 'concat'); ?>
-	<!-- END JS -->
+    <?= Javascript::displayJavascripts(Module_Core::instance()->cfgMinifyJS() === 'concat'); ?>
 
   </body>
 </html>

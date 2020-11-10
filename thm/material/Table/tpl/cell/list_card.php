@@ -7,7 +7,7 @@ $result = $field->getResult();
  class="gdo-list"
  layout="column" flex layout-fill
  ng-controller="GDOListCtrl"
- ng-init='init(<?= json_encode($field->initJSON()); ?>)'>
+ ng-init='init(<?=$field->displayConfigJSON()?>)'>
 
   <md-toolbar layout="row" class="md-hue-3">
 	<div class="md-toolbar-tools">

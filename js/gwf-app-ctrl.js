@@ -7,7 +7,7 @@ controller('GDOAppCtrl', function($scope, $mdSidenav, $mdDialog) {
 		$scope.data.topMenu = { title: 'GDOv6' };
 		$scope.data.leftMenu = { enabled: true };
 		$scope.data.rightMenu = { enabled: true };
-		window.GDO_TRANS.init().then($scope.inited);
+		$scope.inited();
 	}
 	$scope.inited = function() {
 		console.log('GDOAppCtrl.inited()');
