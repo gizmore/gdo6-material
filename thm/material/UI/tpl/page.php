@@ -1,8 +1,10 @@
-<?php /** @var $page \GDO\UI\GDT_Page **/
+<?php
 use GDO\Core\Website;
 use GDO\Util\Javascript;
 use GDO\UI\GDT_Icon;
 use GDO\Core\Module_Core;
+/** @var $page \GDO\UI\GDT_Page **/
+$page->loadSidebars();
 ?>
 <!DOCTYPE html>
 <html>
