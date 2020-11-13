@@ -22,7 +22,7 @@ final class Module_Material extends GDO_Module
 	
 	public function getDependencies() { return ['Angular']; }
 	
-	public function getThemes() { return ['material']; }
+	public function getTheme() { return 'material'; }
 	
 	public function onLoadLanguage() { return $this->loadLanguage('lang/material'); }
 	
@@ -76,7 +76,7 @@ final class Module_Material extends GDO_Module
 	
 	private function onIncludeGDOScripts()
 	{
-	    if (in_array('material', Application::instance()->getThemes(), true))
+	    if (Application::instance()->hasTheme('material'))
 	    {
     		$this->addCSS("css/gdo6-material.css");
     		
