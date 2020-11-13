@@ -30,17 +30,15 @@ final class Module_Material extends GDO_Module
 	{
 	    return [
 	        GDT_Checkbox::make('use_icons')->initial('1'),
-	        GDT_Checkbox::make('include_angular')->initial('0'),
 	    ];
 	}
 	public function cfgUseIcons() { return $this->getConfigValue('use_icons'); }
-	public function cfgIncludeAngular() { return $this->getConfigValue('include_angular'); }
 	
 	public function onIncludeScripts()
 	{
 	    if (Application::instance()->hasTheme('material'))
 	    {
-	        if ($this->cfgIncludeAngular())
+	        if (!Module_Angular::instance()->cfgIncludeScripts())
 	        {
 	            Module_Angular::instance()->onIncludeAngularScripts();
 	        }
