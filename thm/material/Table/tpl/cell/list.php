@@ -43,7 +43,7 @@ echo $pagemenu ? $pagemenu->renderCell() : null;
 <?php foreach ($fields as $gdoType) : ?>
 				<md-input-container>
 				  <label><?= $gdoType->displayLabel(); ?></label>
-				  <?= $gdoType->renderFilter(); ?>
+				  <?= $gdoType->renderFilter($fields->name); ?>
 				</md-input-container>
 <?php endforeach; ?>
 				<input type="hidden" name="mo" value="<?= html(Common::getGetString('mo')); ?>">

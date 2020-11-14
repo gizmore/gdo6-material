@@ -30,7 +30,7 @@ $result = $field->getResult();
 			<?php endif; ?>
 		  </label>
 		  <?php if ($field->filtered) : ?>
-		  <br/><?= $gdoType->renderFilter(); ?>
+		  <br/><?= $gdoType->renderFilter($headers->name); ?>
 		  <?php endif; ?>
 		</th>
 	  <?php endforeach; ?>
