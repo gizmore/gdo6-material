@@ -30,7 +30,8 @@
 		  <?= $field->renderForm(); ?>
 		<?php # endif; ?>
 	  <?php endforeach; ?>
-	</form>
+        <?=$form->actions()->renderCell()?>
+	  </form>
 	</div>
   </div>
 </div>
