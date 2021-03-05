@@ -2,21 +2,31 @@
 use GDO\Table\GDT_List;
 use GDO\UI\GDT_Icon;
 use GDO\Util\Common;
-$field instanceof GDT_List;
+
+/** @var $field GDT_List **/
+
+# Hide empty lists
+if (!$field->countItems())
+{
+    if ($field->hideEmpty)
+    {
+        return; # bailout
+    }
+}
+
 ?>
 <!-- List -->
 <md-list flex layout="column" layout-fill>
-<?php if ($field->title) : ?>
+<?php if ($field->hasTitle()) : ?>
   <md-toolbar layout="row" class="md-hue-3">
 	<div class="md-toolbar-tools">
-	  <span><?= $field->title; ?></span>
+	  <span><?= $field->renderTitle(); ?></span>
 	  <span flex></span>
-	  <a class="md-icon-button md-button" ng-click="showDialogId('#gdo-filter-dialog', $event)">
+	  <a class="md-icon-button md-button" ng-click="showDialogId('#gdo-filter-dialog-<?=$field->name?>', $event)">
 		<?=GDT_Icon::iconS('settings')?>
 	  </a>
 	</div>
   </md-toolbar>
-
 <?php endif;
 $pagemenu = $field->getPageMenu();
 $result = $field->getResult();
@@ -27,13 +37,13 @@ endwhile;
 echo $pagemenu ? $pagemenu->renderCell() : null;
 ?>
 </md-list>
-<!-- End of List 2-->
+<!-- End of List -->
 
 
 <!-- Filter Dialog -->
 <?php if ($fields = $field->getHeaderFields()) : ?>
 <div style="visibility: hidden">
-  <div class="md-dialog-container" id="gdo-filter-dialog">
+  <div class="md-dialog-container" id="gdo-filter-dialog-<?=$field->name?>">
 	<md-dialog aria-label="Mango (Fruit)">
 	  <md-dialog-content style="max-width:800px;max-height:810px; ">
 		<md-tabs md-dynamic-height md-border-bottom>
