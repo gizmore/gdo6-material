@@ -12,8 +12,12 @@
   
   <div class="md-whiteframe-8dp">
 	<div class="gdo-form-head">
-	  <h2 class="gdo-form-title"><?= $form->title; ?></h2>
+<?php if ($form->hasTitle()) : ?>
+	  <h2 class="gdo-form-title"><?= $form->renderTitle(); ?></h2>
+<?php endif; ?>
+<?php if ($form->info) : ?>
 	  <p><?= $form->info; ?></p>
+<?php endif; ?>
 	</div>
 
 	<div class="gdo-form-inner md-inline-form" layout="column" layout-fill flex layout-padding>
