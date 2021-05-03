@@ -3,6 +3,7 @@ use GDO\Core\Website;
 use GDO\Util\Javascript;
 use GDO\UI\GDT_Icon;
 use GDO\Core\Module_Core;
+use GDO\Javascript\Module_Javascript;
 /** @var $page \GDO\UI\GDT_Page **/
 $page->loadSidebars();
 ?>
@@ -66,7 +67,7 @@ $page->loadSidebars();
 	</footer>
 	<!-- END FOOTER -->
 
-    <?= Javascript::displayJavascripts(Module_Core::instance()->cfgMinifyJS() === 'concat'); ?>
+    <?= Javascript::displayJavascripts(Module_Javascript::instance()->cfgMinifyJS() === 'concat'); ?>
 
   </body>
 </html>

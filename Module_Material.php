@@ -8,6 +8,7 @@ use GDO\Core\Website;
 use GDO\Core\Application;
 use GDO\DB\GDT_Checkbox;
 use GDO\Angular\Module_Angular;
+use GDO\Javascript\Module_Javascript;
 
 /**
  * Angular Material Design Theme
@@ -43,7 +44,7 @@ final class Module_Material extends GDO_Module
 	            Module_Angular::instance()->onIncludeAngularScripts();
 	        }
 	        
-	        $min = Module_Core::instance()->cfgMinifyJS() !== 'no' ? '.min' : '';
+	        $min = Module_Javascript::instance()->jsMinAppend();
 	        
 	        # Material
 	        $this->addBowerJavascript("angular-animate/angular-animate$min.js");
