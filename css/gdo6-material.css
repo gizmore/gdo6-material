@@ -43,24 +43,24 @@ md-input-container.gdt-rangeslider {
 }
 
 /** Table **/
-td.gdo-button { padding: 0!important; }
-td.gdo-button .md-button { margin: 0; }
+td.gdt-button { padding: 0!important; }
+td.gdt-button .md-button { margin: 0; }
 /* img.gdo-country, img.gdo-language { width: 42px; } */
-.gdo-table table tbody tr td { padding: 2px 8px; }
-.gdo-table table tbody tr td { vertical-align: middle; font-size: 16px; }
-.gdo-table table tbody tr td.gdt-num { text-align: right; padding-right: 18px; }
-.gdo-table table tbody tr td.gdo-rownum div { position: relative; padding: 0; left: 12px; top: 12px; }
-/* .gdo-table table .gdo-num, .gdo-table table .gdo-rownum { max-width: 80px; } */
-.gdo-tblorder a.sel { color: gold; }
-.gdo-table th md-select { margin: -4px 0 0 0; }
-.gdo-table th md-checkbox { margin: 3px 0; }
-.gdo-tblorder { display: inline-block; position: relative; left: -6px; }
-.gdo-tblorder a { display: block; }
-.gdo-tblorder a:first-child { position: relative; bottom: -12px; }
-.gdo-tblorder a:last-child { position: relative; bottom: 4px; }
-.gdo-table th { text-align: center; white-space: nowrap; }
-.gdo-table th a.sel md-icon { color: gold; }
-.gdo-table th md-icon { font-size: 38px; }
+.gdt-table table tbody tr td { padding: 2px 8px; }
+.gdt-table table tbody tr td { vertical-align: middle; font-size: 16px; }
+.gdt-table table tbody tr td.gdt-num { text-align: right; padding-right: 18px; }
+.gdt-table table tbody tr td.gdo-rownum div { position: relative; padding: 0; left: 12px; top: 12px; }
+/* .gdt-table table .gdo-num, .gdt-table table .gdo-rownum { max-width: 80px; } */
+.gdt-tblorder a.sel { color: gold; }
+.gdt-table th md-select { margin: -4px 0 0 0; }
+.gdt-table th md-checkbox { margin: 3px 0; }
+.gdt-tblorder { display: inline-block; position: relative; left: -6px; }
+.gdt-tblorder a { display: block; }
+.gdt-tblorder a:first-child { position: relative; bottom: -12px; }
+.gdt-tblorder a:last-child { position: relative; bottom: 4px; }
+.gdt-table th { text-align: center; white-space: nowrap; }
+.gdt-table th a.sel md-icon { color: gold; }
+.gdt-table th md-icon { font-size: 38px; }
 .gdo-pagemenu .page-selected a { background: #f00; }
 
 

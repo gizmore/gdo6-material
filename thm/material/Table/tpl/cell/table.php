@@ -8,7 +8,7 @@ if ($pagemenu = $field->getPageMenu())
 $result = $field->getResult();
 ?>
 <div
- class="gdo-table"
+ class="gdt-table"
  flex layout-fill layout-align="center"
  ng-controller="GDOTableCtrl"
  ng-init='init(<?=json_encode($field->configJSON())?>)'>
