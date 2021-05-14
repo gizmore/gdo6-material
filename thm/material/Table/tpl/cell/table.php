@@ -38,7 +38,7 @@ $result = $field->getResult();
 	</thead>
 	<tbody>
 	<?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
-	<tr gdo-id="<?=$gdo->getID()?>">
+	<tr data-gdo-id="<?=$gdo->getID()?>">
 	  <?php foreach($headers as $gdoType) :
 	  $col = $field->getField($gdoType->name);
 	  $gdoType = $col ? $col : $gdoType;
