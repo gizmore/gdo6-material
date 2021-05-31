@@ -5,7 +5,6 @@ use GDO\UI\GDT_Icon;
 use GDO\Core\Module_Core;
 use GDO\Javascript\Module_Javascript;
 /** @var $page \GDO\UI\GDT_Page **/
-$page->loadSidebars();
 ?>
 <!DOCTYPE html>
 <html>
