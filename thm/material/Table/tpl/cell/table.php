@@ -30,7 +30,7 @@ $result = $field->getResult();
 			<?php endif; ?>
 		  </label>
 		  <?php if ($field->filtered) : ?>
-		  <br/><?= $gdoType->renderFilter($headers->name); ?>
+		  <br/><?= $gdoType->renderFilter($field->headers->name); ?>
 		  <?php endif; ?>
 		</th>
 	  <?php endforeach; ?>
@@ -40,8 +40,8 @@ $result = $field->getResult();
 	<?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
 	<tr data-gdo-id="<?=$gdo->getID()?>">
 	  <?php foreach($headers as $gdoType) :
-	  $col = $field->getField($gdoType->name);
-	  $gdoType = $col ? $col : $gdoType;
+// 	  $col = $field->getField($gdoType->name);
+// 	  $gdoType = $col ? $col : $gdoType;
 	  $gdoType->gdo($gdo); ?>
 		<td class="<?= $gdoType->htmlClass(); ?>"><?= $gdoType->gdo($gdo)->renderCell(); ?></td>
 	  <?php endforeach; ?>
