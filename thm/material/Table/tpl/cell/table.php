@@ -15,8 +15,8 @@ $result = $field->getResult();
 <form method="get" action="<?= $field->href; ?>" class="b">
   <input type="hidden" name="mo" value="<?= html(Common::getGetString('mo','')); ?>" />
   <input type="hidden" name="me" value="<?= html(Common::getGetString('me','')); ?>" />
-  <?php if ($field->title) : ?>
-  <h3><?= $field->title; ?></h3>
+  <?php if ($field->hasTitle()) : ?>
+  <h3><?= $field->renderTitle(); ?></h3>
   <?php endif; ?>
   <table id="gwfdt-<?= $field->name; ?>" class="table">
 	<thead>
