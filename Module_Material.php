@@ -47,21 +47,21 @@ final class Module_Material extends GDO_Module
 	        $min = Module_Javascript::instance()->jsMinAppend();
 	        
 	        # Material
-	        $this->addBowerJavascript("angular-animate/angular-animate$min.js");
-	        $this->addBowerJavascript("angular-aria/angular-aria$min.js");
-	        $this->addBowerJavascript("angular-messages/angular-messages$min.js");
-	        $this->addBowerJavascript("angular-material/angular-material$min.js");
+	        $this->addBowerJS("angular-animate/angular-animate$min.js");
+	        $this->addBowerJS("angular-aria/angular-aria$min.js");
+	        $this->addBowerJS("angular-messages/angular-messages$min.js");
+	        $this->addBowerJS("angular-material/angular-material$min.js");
 	        $this->addBowerCSS("angular-material/angular-material$min.css");
 	        # Icons
-//          $this->addBowerJavascript("angular-material-icons/angular-material-icons$min.js");
+//          $this->addBowerJS("angular-material-icons/angular-material-icons$min.js");
 //          $this->addBowerCSS("angular-material-icons/angular-material-icons.css");
 	        Website::addCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
 	        # MD File
-	        $this->addBowerJavascript("lf-ng-md-file-input/dist/lf-ng-md-file-input$min.js");
+	        $this->addBowerJS("lf-ng-md-file-input/dist/lf-ng-md-file-input$min.js");
 	        $this->addBowerCSS("lf-ng-md-file-input/dist/lf-ng-md-file-input$min.css");
 	        # Datetime
-	        $this->addBowerJavascript("moment/min/moment-with-locales.min.js");
-	        $this->addBowerJavascript("ng-material-datetimepicker/dist/angular-material-datetimepicker.min.js");
+	        $this->addBowerJS("moment/min/moment-with-locales.min.js");
+	        $this->addBowerJS("ng-material-datetimepicker/dist/angular-material-datetimepicker.min.js");
 	        $this->addBowerCSS("ng-material-datetimepicker/dist/material-datetimepicker.min.css");
 	        
 	        $this->onIncludeGDOScripts();
@@ -79,11 +79,11 @@ final class Module_Material extends GDO_Module
 	    {
     		$this->addCSS("css/gdo6-material.css");
     		
-    		$this->addJavascript('js/gdo-module.js');
+    		$this->addJS('js/gdo-module.js');
     		
-    		$this->addJavascript('js/gwf-app-ctrl.js');
-    		$this->addJavascript('js/gwf-error-srvc.js');
-    		$this->addJavascript('js/gwf-request-interceptor.js');
+    		$this->addJS('js/gwf-app-ctrl.js');
+    		$this->addJS('js/gwf-error-srvc.js');
+    		$this->addJS('js/gwf-request-interceptor.js');
 	    }
 	}
 }
