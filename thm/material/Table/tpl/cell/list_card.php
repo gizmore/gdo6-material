@@ -11,7 +11,7 @@ $result = $field->getResult();
 
   <md-toolbar layout="row" class="md-hue-3">
 	<div class="md-toolbar-tools">
-	  <span><?= $field->title; ?></span>
+	  <span><?= $field->renderTitle(); ?></span>
 	  <span flex></span>
 	  <a class="md-icon-button md-button" ng-click="showDialogId('#gdo-filter-dialog', $event)">
 		<?=GDT_Icon::iconS('settings')?>
