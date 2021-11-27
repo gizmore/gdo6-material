@@ -21,16 +21,16 @@ $result = $field->getResult();
   <table id="gwfdt-<?= $field->name; ?>" class="table">
 	<thead>
 	  <tr>
-	  <?php foreach($headers as $gdoType) : ?>
-		<th class="<?= $gdoType->htmlClass(); ?>">
+	  <?php foreach($headers as $gdt) : ?>
+		<th class="<?= $gdt->htmlClass(); ?>">
 		  <label>
-			<?= $gdoType->renderHeader(); ?>
+			<?= $gdt->renderHeader(); ?>
 			<?php if ($field->ordered) : ?>
-			<?= $gdoType->displayTableOrder($field); ?>
+			<?= $gdt->displayTableOrder($field); ?>
 			<?php endif; ?>
 		  </label>
 		  <?php if ($field->filtered) : ?>
-		  <br/><?= $gdoType->renderFilter($field->headers->name); ?>
+		  <br/><?= $gdt->renderFilter($field->headers->name); ?>
 		  <?php endif; ?>
 		</th>
 	  <?php endforeach; ?>
@@ -39,11 +39,11 @@ $result = $field->getResult();
 	<tbody>
 	<?php while ($gdo = $result->fetchAs($field->fetchAs)) : ?>
 	<tr data-gdo-id="<?=$gdo->getID()?>">
-	  <?php foreach($headers as $gdoType) :
-// 	  $col = $field->getField($gdoType->name);
-// 	  $gdoType = $col ? $col : $gdoType;
-	  $gdoType->gdo($gdo); ?>
-		<td class="<?= $gdoType->htmlClass(); ?>"><?= $gdoType->gdo($gdo)->renderCell(); ?></td>
+	  <?php foreach($headers as $gdt) :
+// 	  $col = $field->getField($gdt->name);
+// 	  $gdt = $col ? $col : $gdt;
+	  $gdt->gdo($gdo); ?>
+		<td class="<?= $gdt->htmlClass(); ?>"><?= $gdt->gdo($gdo)->renderCell(); ?></td>
 	  <?php endforeach; ?>
 	</tr>
 	<?php endwhile; ?>

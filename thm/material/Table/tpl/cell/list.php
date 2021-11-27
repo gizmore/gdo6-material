@@ -50,10 +50,10 @@ echo $pagemenu ? $pagemenu->renderCell() : null;
 		  <md-tab label="Filters">
 			<md-content class="md-padding">
 			  <form method="get" action="<?= $field->href ?>">
-<?php foreach ($fields as $gdoType) : ?>
+<?php foreach ($fields as $gdt) : ?>
 				<md-input-container>
-				  <label><?= $gdoType->displayLabel(); ?></label>
-				  <?= $gdoType->renderFilter($fields->name); ?>
+				  <label><?= $gdt->displayLabel(); ?></label>
+				  <?= $gdt->renderFilter($fields->name); ?>
 				</md-input-container>
 <?php endforeach; ?>
 				<input type="hidden" name="mo" value="<?= html(Common::getRequestString('mo')); ?>">
@@ -64,9 +64,9 @@ echo $pagemenu ? $pagemenu->renderCell() : null;
 		  </md-tab>
 		  <md-tab label="Sorting">
 			<md-content class="md-padding">
-<?php foreach ($fields as $gdoType) : ?>
-			  <label><?= @$gdoType->displayLabel(); ?></label>
-			  <?= $gdoType->displayTableOrder($field)?>
+<?php foreach ($fields as $gdt) : ?>
+			  <label><?= @$gdt->displayLabel(); ?></label>
+			  <?= $gdt->displayTableOrder($field)?>
 <?php endforeach; ?>
 			</md-content>
 		  </md-tab>
