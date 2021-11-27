@@ -50,8 +50,8 @@ while ($gdo = $result->fetchObject())
 				  <?= $gdoType->renderFilter($fields->name); ?>
 				</md-input-container>
 <?php endforeach; ?>
-				<input type="hidden" name="mo" value="<?= html(Common::getGetString('mo')); ?>">
-				<input type="hidden" name="me" value="<?= html(Common::getGetString('me')); ?>">
+				<input type="hidden" name="mo" value="<?= html(Common::getRequestString('mo')); ?>">
+				<input type="hidden" name="me" value="<?= html(Common::getRequestString('me')); ?>">
 				<input type="submit" class="n" />
 			  </form>
 			</md-content>

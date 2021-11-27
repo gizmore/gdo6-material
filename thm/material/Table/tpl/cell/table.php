@@ -13,8 +13,8 @@ $result = $field->getResult();
  ng-controller="GDOTableCtrl"
  ng-init='init(<?=json_encode($field->configJSON())?>)'>
 <form method="get" action="<?= $field->href; ?>" class="b">
-  <input type="hidden" name="mo" value="<?= html(Common::getGetString('mo','')); ?>" />
-  <input type="hidden" name="me" value="<?= html(Common::getGetString('me','')); ?>" />
+  <input type="hidden" name="mo" value="<?= html(Common::getRequestString('mo','')); ?>" />
+  <input type="hidden" name="me" value="<?= html(Common::getRequestString('me','')); ?>" />
   <?php if ($field->hasTitle()) : ?>
   <h3><?= $field->renderTitle(); ?></h3>
   <?php endif; ?>
