@@ -9,7 +9,7 @@ $id = 'date_'.$field->name;
   <input
    mdc-datetime-picker=""
    ng-model="pickDate"
-   ng-init="pickDate='<?= $field->displayVar(); ?>'"
+   ng-init="pickDate='<?= $field->display(); ?>'"
    ng-change="datePicked('#<?= $id ?>')"
    date="true"
    time="false"

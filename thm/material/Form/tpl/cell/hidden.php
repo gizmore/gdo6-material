@@ -5,5 +5,5 @@ $field instanceof GDT_Hidden;
 <input
  class="n"
  name="<?= $field->name?>"
- value="<?= $field->displayVar(); ?>"
+ value="<?= $field->display(); ?>"
  type="hidden" />

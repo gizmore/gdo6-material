@@ -17,7 +17,7 @@ $field instanceof GDT_Enum;
    class="n"
    type="hidden"
    id="fsel_<?= $field->name; ?>"
-   value="<?= $field->displayVar(); ?>"
+   value="<?= $field->display(); ?>"
    name="f[<?= $field->name?>]" />
   <div class="gdo-error"><?= $field->error; ?></div>
 </md-input-container>

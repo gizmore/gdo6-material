@@ -22,7 +22,7 @@ $field instanceof GDT_Avatar;
    class="n"
    type="hidden"
    id="gwfsel_<?= $field->name; ?>"
-   value="<?= $field->displayVar(); ?>"
+   value="<?= $field->display(); ?>"
    <?=$field->htmlFormName()?> />
   <div class="gdo-error"><?= $field->error; ?></div>
 </md-input-container>

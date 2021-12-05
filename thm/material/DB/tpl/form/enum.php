@@ -19,7 +19,7 @@
    class="n"
    type="hidden"
    id="gwfsel_<?= $field->name; ?>"
-   value="<?= $field->displayVar(); ?>"
+   value="<?= $field->display(); ?>"
    <?=$field->htmlFormName()?> />
   <?=$field->htmlError()?>
 </md-input-container>

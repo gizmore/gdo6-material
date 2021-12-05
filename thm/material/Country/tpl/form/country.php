@@ -13,7 +13,7 @@ $field instanceof GDT_Country;
    ng-init='init(<?= $field->getVar(); ?>)'
    ng-change="multiValueSelected('#gwfsel_<?= $field->name; ?>')">
    <?php } else { ?>
-   ng-init="selection='<?= $field->displayVar(); ?>'"
+   ng-init="selection='<?= $field->display(); ?>'"
    ng-change="valueSelected('#gwfsel_<?= $field->name; ?>')">
    <?php } ?>
 	<?php if ($field->emptyLabel) : ?>
@@ -34,7 +34,7 @@ $field instanceof GDT_Country;
    class="n"
    type="hidden"
    id="gwfsel_<?= $field->name; ?>"
-   value="<?= $field->displayVar(); ?>"
+   value="<?= $field->display(); ?>"
    <?=$field->htmlFormName()?> />
   <div class="gdo-error"><?= $field->error; ?></div>
 </md-input-container>
