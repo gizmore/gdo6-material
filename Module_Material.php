@@ -44,7 +44,7 @@ final class Module_Material extends GDO_Module
 	            Module_Angular::instance()->onIncludeAngularScripts();
 	        }
 	        
-	        $min = Module_Javascript::instance()->jsMinAppend();
+	        $min = Module_Javascript::instance()->cfgMinAppend();
 	        
 	        # Material
 	        $this->addBowerJS("angular-animate/angular-animate$min.js");
