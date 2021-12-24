@@ -20,7 +20,7 @@ $field instanceof GDT_Country;
 	  <md-option value="<?= $field->emptyValue; ?>">
 		<img
 		 class="gdo-country"
-		 src="/theme/default/img/country/zz.png" />
+		 src="/theme/default/img/country/ZZ.png" />
 		<?= $field->displayEmptyLabel(); ?>
 	  </md-option>
 	<?php endif; ?>
