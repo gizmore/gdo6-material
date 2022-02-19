@@ -6,7 +6,7 @@ $field instanceof GDT_File;
 ?>
 <div class="gdo-file-controls">
 <?php foreach ($field->getInitialFiles() as $file) : $file instanceof \GDO\File\GDO_File; ?>
-<?php $deleteButton = sprintf('<input type="submit" name="delete_%s[%s]" value="Remove File" />', $field->name, $file->getID()); #->href($_SERVER['REQUEST_URI']); ?>
+<?php $deleteButton = sprintf('<input type="submit" name="delete_%s[%s]" value="Remove File" />', $field->name, $file->getID());
 <?php if ($field->preview && $file->isImageType()) : ?>
 <?php printf('<div class="gdo-file-preview"><img src="%s" />%s (%s)</div>', $field->displayPreviewHref($file), $deleteButton, html($file->getName())); ?>
 <?php else : ?>
